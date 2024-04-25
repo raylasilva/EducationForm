@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CriarLoginRepository extends JpaRepository<UsuariosModel, Long> {
     UsuariosModel findByEmail(String email);
-    UsuariosModel findByTipo(char tipo);
+
 
 }
