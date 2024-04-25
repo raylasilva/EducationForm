@@ -53,27 +53,27 @@ public class CriarLoginController {
         }
     }
 
-    @GetMapping("/darfaltas")
-    public String mostrarPaginaDeFaltas(@AuthenticationPrincipal UserDetails userDetails) {
-        if (userDetails != null) {
-            // Usuário autenticado é um professor
-            return "DarFaltas"; // Retornar o nome da página de faltas
-        } else {
-            // Se não for um professor ou não estiver autenticado, redirecione para página de login
-            return "redirect:/login";
-        }
+//    @GetMapping("/painelprofessorr")
+//   public String mostrarPainelProfessor(@AuthenticationPrincipal UserDetails userDetails) {
+//       if (userDetails != null) {
+//          // Usuário autenticado é um professor
+//            return "PainelProfessor"; // Retornar o nome da página de faltas
+//        } else {
+//            // Se não for um professor ou não estiver autenticado, redirecione para página de login
+//            return "redirect:/login";
+//        }
+//    }
+//
+//    @GetMapping("/darnotas")
+//    public String mostrarPaginaDeNotas(@AuthenticationPrincipal UserDetails userDetails) {
+//        if (userDetails != null) {
+//            // Usuário autenticado é um professor
+//            return "DarNotas"; // Retornar o nome da página de faltas
+//        } else {
+//            // Se não for um professor ou não estiver autenticado, redirecione para página de login
+//            return "redirect:/login";
+//        }
     }
 
-    @GetMapping("/darnotas")
-    public String mostrarPaginaDeNotas(@AuthenticationPrincipal UserDetails userDetails) {
-        if (userDetails != null) {
-            // Usuário autenticado é um professor
-            return "DarNotas"; // Retornar o nome da página de faltas
-        } else {
-            // Se não for um professor ou não estiver autenticado, redirecione para página de login
-            return "redirect:/login";
-        }
-    }
 
-}
 

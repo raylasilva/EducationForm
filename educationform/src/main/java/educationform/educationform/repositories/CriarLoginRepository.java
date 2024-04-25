@@ -9,4 +9,6 @@ public interface CriarLoginRepository extends JpaRepository<UsuariosModel, Long>
     UsuariosModel findByEmail(String email);
 
 
+
+
 }

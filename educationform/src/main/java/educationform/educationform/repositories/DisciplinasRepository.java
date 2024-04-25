@@ -8,12 +8,15 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Repository;
 
 import java.util.Date;
+import java.util.List;
 
 
 @Repository
 public interface DisciplinasRepository extends JpaRepository<DisciplinasModel, Long> {
-    DisciplinasModel findByNome(String nome);
+//   List<AlunosModel> findById_aluno(AlunosModel aluno);
+    DisciplinasModel findByNomeDisciplina(String nomeDisciplina);
     DisciplinasModel findByTurma(String turma);
-    DisciplinasModel findByNota(float nota);
+    DisciplinasModel findByNota(Float nota);
+    DisciplinasModel findByFaltas(Integer faltas);
     DisciplinasModel findByData(Date data);
 }

@@ -12,23 +12,23 @@ public class DisciplinasModel {
     private long id_disciplina;
 
     @Column
-    private String nome;
+    private String nomeDisciplina;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_professor")
-    private ProfessoresModel professor;
+    private ProfessoresModel id_professor;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_aluno")
-    private AlunosModel aluno;
+    private AlunosModel id_aluno;
 
     @Column
     private String turma;
 
     @Column
-    private float nota;
+    private Float nota;
     @Column
-    private int faltas;
+    private Integer faltas;
     @Column
     @DateTimeFormat(pattern = "dd-MM-yyyy")
     private Date data;
@@ -62,7 +62,24 @@ public class DisciplinasModel {
     public DisciplinasModel() {
     }
 
-    // Getters e Setters omitidos para brevidade
+
+    public DisciplinasModel(AlunosModel id_aluno, String nomeDisciplina, String turma, Float nota, Integer faltas, Date data ) {
+        this.nomeDisciplina = nomeDisciplina;
+        this.id_aluno = id_aluno;
+        this.turma = turma;
+        this.nota = nota;
+        this.faltas = faltas;
+        this.data = data;
+    }
+// Getters e Setters omitidos para brevidade
+
+    public void setNota(Float nota) {
+        this.nota = nota;
+    }
+
+    public void setFaltas(Integer faltas) {
+        this.faltas = faltas;
+    }
 
     public long getId_disciplina() {
         return id_disciplina;
@@ -72,28 +89,30 @@ public class DisciplinasModel {
         this.id_disciplina = id_disciplina;
     }
 
-    public String getNome() {
-        return nome;
+
+    public String getNomeDisciplina() {
+        return nomeDisciplina;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomeDisciplina(String nomeDisciplina) {
+        this.nomeDisciplina = nomeDisciplina;
     }
 
-    public ProfessoresModel getProfessor() {
-        return professor;
+
+    public ProfessoresModel getId_professor() {
+        return id_professor;
     }
 
-    public void setProfessor(ProfessoresModel professor) {
-        this.professor = professor;
+    public void setId_professor(ProfessoresModel id_professor) {
+        this.id_professor = id_professor;
     }
 
-    public AlunosModel getAluno() {
-        return aluno;
+    public AlunosModel getId_aluno() {
+        return id_aluno;
     }
 
-    public void setAluno(AlunosModel aluno) {
-        this.aluno = aluno;
+    public void setId_aluno(AlunosModel id_aluno) {
+        this.id_aluno = id_aluno;
     }
 
     public String getTurma() {

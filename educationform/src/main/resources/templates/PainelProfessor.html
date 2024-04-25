@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ver Notas</title>
+</head>
+<body>
+<h1>Lista de Alunos</h1>
+<table>
+    <thead class="titulo-tabela">
+
+    <tr>
+        <th>Id aluno</th>
+        <th>Nome disciplina</th>
+        <th>turma</th>
+        <th>nota</th>
+        <th>Faltas</th>
+        <th>Data</th>
+
+
+    </tr>
+    </thead>
+    <tr>
+
+        <td> <p> <span th:text="${disciplinas.nomeDisciplina}"></span></p></td>
+        <td> <p><span th:text="${disciplinas.turma}"></span></p></td>
+        <td> <p> <span th:text="${disciplinas.nota}"></span></p></td>
+        <td> <p><span th:text="${disciplinas.faltas}"></span></p></td>
+        <td><p><span th:text="${disciplinas.data}"></span></p></td>
+
+    </tr>
+
+</table>
+</body>
+</html>
